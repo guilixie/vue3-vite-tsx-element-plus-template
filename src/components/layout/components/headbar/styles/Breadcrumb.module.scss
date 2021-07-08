@@ -1,0 +1,35 @@
+@mixin breadcrumb-color{
+  @include inherit-color;
+  &:hover {
+    @include inherit-color;
+  }
+}
+
+.app-breadcrumb-container {
+  padding: 0 $padding;
+  font-size: 14px;
+  color: $headFontColor;
+  line-height: inherit;
+
+  .el-breadcrumb__item {
+    &:last-child {
+      .el-breadcrumb__inner {
+        @include breadcrumb-color;
+        a {
+          @include breadcrumb-color;
+        }
+      }
+    }
+  }
+
+  .el-breadcrumb__inner {
+    @include inherit-color;
+
+    a,&.is-link {
+      color: $headLinkFontColor;
+      &:hover {
+        color: $headLinkHoverFontColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.card-tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+
+  .card-tab {
+    width: 250px;
+    padding: 5px;
+    cursor: pointer;
+
+    .el-card__body {
+      padding: 15px;
+    }
+
+    &__title {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 5px;
+    }
+  
+    &__active {
+      .el-card {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+    
+    &__content {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

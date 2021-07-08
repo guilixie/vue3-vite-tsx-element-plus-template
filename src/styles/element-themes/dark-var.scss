@@ -1,0 +1,4 @@
+// 解决font丢失问题，后期升级版本在删除
+$--font-path: 'element-plus/lib/theme-chalk/fonts';
+
+@import 'element-plus/packages/theme-chalk/src/index';

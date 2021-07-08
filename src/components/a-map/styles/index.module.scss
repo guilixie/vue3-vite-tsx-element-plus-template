@@ -1,0 +1,17 @@
+.a-map-container {
+  height: 100%;
+  position: relative;
+  .a-map {
+    width: 100%;
+    height: 100%;
+  }
+}
+.a-map-search-container {
+  position: absolute;
+  top: 0;
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.amap-sug-result {
+  z-index: 10000;
+}

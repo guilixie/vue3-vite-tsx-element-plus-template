@@ -1,0 +1,52 @@
+// 主要颜色
+$fontColor: #ddd;
+$activeFontColor: #fff;
+$bodyBgColor: #000;
+$appContentBorderColor: #000;
+
+// 主题色
+$primary: #409eff;
+$danger: #F56C6C;
+$warning: #E6A23C;
+$success: #67C23A;
+$info: #909399;
+
+// 导航相关
+$navFontColor: $fontColor;
+$navBgColor: #262834;
+$navHoverBgColor: #001528;
+$navHoverFontColor: $activeFontColor;
+$navSubBgColor: #262834;
+$navSubHoverBgColor: #001528;
+$navActiveFontColor: $primary;
+$navActiveBgColor: $navSubHoverBgColor;
+$navActiveBorderColor: $primary;
+
+// 页面头部相关
+$headBgColor: #262834;
+$headFontColor: $fontColor;
+$headLinkFontColor: #ababab;
+$headLinkHoverFontColor: $primary;
+
+// 表单相关
+$borderColor: #3C3F4B;
+$popperBgColor: #191c29;
+$popperBorderColor: #333;
+$formBgColor: #191c29;
+
+// 表格相关
+$tableHeadBgColor: #2e3151;
+$tableBgColor: #333;
+$tableBorderColor: #000;
+$tableHoverBgColor: #515a6e;
+$tableStripeBgColor: #3C3F4B;
+
+// 树相关
+$treeBgColor: transparent;
+$treeNodeHoverBgColor: $tableHoverBgColor;
+
+// 穿梭框相关
+$transferHeadBgColor: #2e3151;
+$transferBgColor: #333;
+$transferBorderColor: #000;
+

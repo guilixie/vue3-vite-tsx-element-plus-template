@@ -1,0 +1,248 @@
+// 内部主题变量覆盖
+@import "@/styles/element-themes/dark-var.scss";
+
+@mixin popper-common {
+  border-color: $popperBgColor;
+  background-color: $popperBgColor;
+}
+
+#app {
+
+  // element-plus样式覆盖
+  // 表格相关
+  .el-table {
+    color: $fontColor;
+
+    tr {
+      background-color: $tableBgColor;
+    }
+
+    th {
+      background-color: $tableHeadBgColor;
+      color: $fontColor;
+    }
+
+    .el-loading-mask {
+      background-color: rgba(0, 0, 0, .65);
+    }
+  }
+
+  .el-table__empty-block {
+    background-color: $tableBgColor;
+  }
+
+  .el-table__empty-text {
+    color: $fontColor;
+  }
+
+  // border
+  .el-table--border td,
+  .el-table--border th,
+  .el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+    border-right: 1px solid $tableBorderColor;
+  }
+
+  .el-table--border,
+  .el-table--group {
+    border: 1px solid $tableBorderColor;
+  }
+
+  .el-table td,
+  .el-table th.is-leaf {
+    border-bottom: 1px solid $tableBorderColor;
+  }
+
+  .el-table__fixed-right::before,
+  .el-table__fixed::before,
+  .el-table--border::after,
+  .el-table--group::after,
+  .el-table::before {
+    background-color: $tableBorderColor;
+  }
+
+  // stripe
+  .el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: $tableStripeBgColor;
+  }
+
+  // hover
+  .el-table__body tr.el-table__row:hover>td,
+  .el-table__body tr.hover-row.current-row>td,
+  .el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+  .el-table__body tr.hover-row.el-table__row--striped>td,
+  .el-table__body tr.hover-row>td {
+    background-color: $tableHoverBgColor;
+    color: $activeFontColor;
+  }
+
+  // 表单相关
+  .el-form-item__label {
+    color: $fontColor;
+  }
+
+  .el-input__inner {
+    background-color: $formBgColor;
+    border: 1px solid $borderColor;
+    color: $fontColor;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .el-input.is-active .el-input__inner {
+    border-color: $primary;
+  }
+
+  .el-date-editor .el-range-input {
+    background: transparent;
+  }
+
+  // 分页相关
+  .el-pagination {
+    color: $fontColor;
+
+    &.is-background {
+
+      .btn-next,
+      .btn-prev {
+        color: $fontColor;
+        background-color: $formBgColor;
+        border: 1px solid $borderColor;
+
+        &:disabled,
+        &.disabled {
+          color: $borderColor;
+        }
+      }
+
+      .el-pager {
+        li {
+          color: $fontColor;
+          background-color: $formBgColor;
+          border: 1px solid $borderColor;
+
+          &.disabled {
+            color: $borderColor;
+          }
+
+          &:not(.disabled):hover {
+            color: $primary;
+            border-color: $primary;
+          }
+
+          &:not(.disabled).active {
+            background-color: $primary;
+            color: $activeFontColor;
+          }
+        }
+      }
+    }
+  }
+
+  .el-pagination__total,
+  .el-pagination__sizes,
+  .el-pagination__jump {
+    color: $fontColor;
+  }
+
+}
+
+.el-popper.is-dark {
+  @include popper-common;
+
+  .el-popper__arrow::before {
+    @include popper-common;
+  }
+}
+
+.el-select__popper.el-popper[role=tooltip],
+.el-dropdown__popper.el-popper[role=tooltip] {
+  background-color: $popperBorderColor;
+  border-color: $popperBorderColor;
+
+  .el-popper__arrow::before {
+    @include popper-common;
+  }
+}
+
+.el-select-dropdown,
+.el-dropdown-menu {
+  background-color: $popperBgColor;
+
+  .el-select-dropdown__item,
+  .el-dropdown-menu__item {
+    color: $fontColor;
+
+    &:focus,
+    &:not(.is-disabled):hover {
+      background-color: $primary;
+      color: $fontColor;
+    }
+  }
+}
+
+.el-checkbox {
+  color: $fontColor;
+}
+
+.el-overlay {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.el-dialog {
+  background-color: $navBgColor;
+}
+
+.el-dialog__title {
+  color: $fontColor;
+}
+
+.el-dialog__body {
+  color: $fontColor;
+}
+
+.el-tabs__item {
+  color: $fontColor;
+}
+
+.el-tabs__nav-wrap::after {
+  background-color: $borderColor;
+}
+
+.el-divider {
+  background-color: $borderColor;
+}
+
+.el-divider__text {
+  background-color: $navBgColor;
+  color: $fontColor;
+}
+
+.el-card {
+  border-color: $borderColor;
+  background-color: $navBgColor;
+  color: $fontColor;
+}
+
+.el-tree {
+  color: inherit;
+  background-color: $treeBgColor;
+}
+
+.el-tree-node__content:hover,
+.el-tree-node:focus>.el-tree-node__content,
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+  background-color: $treeNodeHoverBgColor;
+}
+
+.el-transfer-panel {
+  border-color: $transferBorderColor;
+  background: $transferBgColor;
+
+  .el-transfer-panel__header {
+    background: $transferHeadBgColor;
+    border-bottom-color: $transferBorderColor;
+    color: $activeFontColor;
+  }
+}

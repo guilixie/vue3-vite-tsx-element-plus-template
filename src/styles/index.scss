@@ -1,0 +1,107 @@
+// 深色主题
+// @import "@/styles/themes/dark/index.scss"; // 自定义主题样式
+
+// 浅色主题
+// @import "@/styles/themes/light/index.scss"; // 自定义主题样式
+
+// 主要主题
+@import "@/styles/themes/primary/index.scss"; // 自定义主题样式
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  @include box-all;
+}
+
+#app {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: $fontColor;
+  background-color: $bodyBgColor;
+  @include box-all;
+
+  .color-primary {
+    color: $primary;
+  }
+  .color-danger {
+    color: $danger;
+  }
+  .color-success {
+    color: $success;
+  }
+  .color-warning {
+    color: $warning
+  }
+  .color-info {
+    color: $info;
+  }
+
+  // element-plus样式覆盖
+  // 表格相关
+  .el-table {
+    width: 100%;
+    .el-link {
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    .el-icon-loading {
+      font-size: 18px;
+    }
+    .el-loading-text {
+      font-size: 12px;
+    }
+  }
+  .el-input-number {
+    .el-input {
+      margin-top: -1px;
+    }
+  }
+
+  // 自定义样式
+  .box-all {
+    @include box-all;
+  }
+  .app-action-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding 0;
+  }
+  .app-table-container {
+    color: $fontColor;
+    text-align: left;
+  }
+  .app-pager-container {
+    text-align: right;
+    padding: $padding 0;
+  }
+  .app-dialog-container {
+    margin-top: 10vh !important;
+    height: 80vh;
+    .el-dialog__body {
+      height: calc(100% - 116px);
+      overflow: auto;
+      padding: 0;
+    }
+    .el-scrollbar__view {
+      padding: 20px;
+    }
+  }
+  .app-dialog-footer {
+    text-align: center;
+  }
+  .app-config-table {
+    width: 100%;
+    th, td {
+      padding: 5px 0;
+      text-align: center;
+    }
+    .flex-td {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

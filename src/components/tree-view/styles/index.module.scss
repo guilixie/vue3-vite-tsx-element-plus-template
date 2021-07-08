@@ -1,0 +1,91 @@
+.tree-view {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  .el-scrollbar__view {
+    padding: 0;
+  }
+  .el-tree {
+    width: 100%;
+  }
+	.tree-head {
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		padding: 10px 0;
+		background: transparent;
+	}
+	.tree-title {
+		font-size: 16px;
+		color: $activeFontColor;
+		padding: 0 0 10px;
+		span {
+			padding-left: 6px;
+		}
+		.tree-loading {
+			float: right;
+		}
+	}
+	.tree-input {
+		width: 100%;
+		&.editable {
+			width: calc(100% - 25px);
+		}
+	}
+	.head-action-icon {
+		font-size: 18px;
+		margin-left: 6px;
+    cursor: pointer;
+	}
+	.head-action-icon:hover {
+		opacity: 0.6;
+	}
+	.head-action-icon:active {
+		opacity: 0.3;
+		margin-bottom: -1px;
+	}
+	.el-tree-node__expand-icon {
+		// order: 1; // 显示在右侧
+		padding-left: 0;
+	}
+	.custom-tree-node {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 14px;
+		position: relative;
+		.el-input__inner {
+			line-height: 22px;
+			height: 22px;
+			width: 80%;
+			font-size: 14px;
+			padding: 0 8px;
+		}
+		.tv-edit-wrap {
+			display: inline-flex;
+			justify-content: flex-end;
+			position: absolute;
+      color: $info;
+			right: 0;
+		}
+		.node-icon {
+			font-size: 16px;
+			color: $primary;
+      padding-right: 5px;
+		}
+		.tv-action-icon {
+			position: relative;
+			font-size: 14px;
+			margin-left: 5px;
+		}
+		.tv-action-icon:hover {
+			opacity: 0.6;
+		}
+		.tv-action-icon:active {
+			opacity: 0.3;
+			margin-bottom: -1px;
+		}
+	}
+}

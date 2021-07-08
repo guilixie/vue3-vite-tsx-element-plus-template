@@ -1,0 +1,11 @@
+.app-title {
+  box-sizing: border-box;
+  width: $sidebarWidth;
+  margin: 0;
+  padding: 0 $padding;
+  height: $headHeight;
+  line-height: $headHeight;
+  font-weight: 500;
+  color: $headFontColor;
+  font-size: 16px;
+}

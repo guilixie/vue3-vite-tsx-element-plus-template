@@ -1,0 +1,18 @@
+// 自定义主题变量
+// @import "@/styles/themes/dark/variable.scss"; // 深色主题变量
+// @import "@/styles/themes/light/variable.scss"; // 浅色主题变量
+@import "@/styles/themes/primary/variable.scss"; // 主要主题变量
+
+$headHeight: 60px;
+$sidebarWidth: 200px;
+$padding: 20px;
+
+@mixin box-all {
+  height: 100%;
+} 
+@mixin inherit-color {
+  color: inherit;
+} 
+@mixin bg-transparent {
+  background-color: transparent;
+}

@@ -1,0 +1,35 @@
+// 主要颜色
+$fontColor: #303133;
+$activeFontColor: #606266;
+$bodyBgColor: #fff;
+$appContentBorderColor: #ebeef5;
+
+// 主题色
+$primary: #4c81e0;
+$danger: #D9001B;
+$warning: #E6A23C;
+$success: #67C23A;
+$info: #909399;
+
+// 导航相关
+$navFontColor: $fontColor;
+$navBgColor: #fff;
+$navHoverBgColor: #ecf5ff;
+$navHoverFontColor: $fontColor;
+$navSubBgColor: #fff;
+$navSubHoverBgColor: #ecf5ff;
+$navActiveFontColor: $primary;
+$navActiveBgColor: $navSubHoverBgColor;
+$navActiveBorderColor: $primary;
+
+// 页面头部相关
+$headBgColor: #fff;
+$headFontColor: $fontColor;
+$headLinkFontColor: $fontColor;
+$headLinkHoverFontColor: $primary;
+
+// 表单相关
+$borderColor: #ebeef5;
+
+// 表格相关
+$tableHeadBgColor: #f2f2f2;

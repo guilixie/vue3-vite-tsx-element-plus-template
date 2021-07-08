@@ -1,0 +1,11 @@
+.app-container {
+	@include box-all;
+	.app-header {
+		background-color: $headBgColor;
+		line-height: $headHeight;
+		padding: 0;
+	}
+	.app-body {
+		height: calc(100% - 60px);
+	}
+}

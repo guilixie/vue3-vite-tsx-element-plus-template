@@ -1,0 +1,15 @@
+.add-res-dialog-container {
+  .el-dialog__body {
+    height: calc(100vh - 176px);  
+  }
+  .res-info-form {
+    .el-form-item__content {
+      width: 25%;
+    }
+  }
+  .street-select-transfer {
+    .el-transfer-panel__body {
+      height: calc(100vh - 320px);
+    }
+  }
+}

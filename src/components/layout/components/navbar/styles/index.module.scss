@@ -1,0 +1,74 @@
+@mixin menu-item-hover-focus {
+	&:focus,
+	&:hover {
+		color: $navHoverFontColor;
+		background-color: $navHoverBgColor;
+	}
+}
+@mixin sub-menu-item-hover-focus {
+	&:focus,
+	&:hover {
+		background-color: $navSubHoverBgColor;
+	}
+}
+@mixin nav-bg-common {
+	@include bg-transparent;
+	border-right: none;
+	color: $navFontColor;
+}
+
+.app-nav-container {
+	overflow: auto;
+	@include box-all;
+	@include nav-bg-common;
+
+	.el-scrollbar__view {
+		padding-bottom: $padding;
+	}
+
+	.el-menu {
+		@include nav-bg-common;
+	}
+
+	.el-menu-item {
+		color: $navFontColor;
+		@include menu-item-hover-focus;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+      transform: scaleY(.0001);
+      opacity: 0;
+			border-right: 2px solid $navActiveBorderColor;
+			height: 100%;
+      transition: transform .15s cubic-bezier(.645,.045,.355,1), opacity .15s cubic-bezier(.645,.045,.355,1);
+		}
+		&.is-active {
+			color: $navActiveFontColor;
+			background-color: $navActiveBgColor;
+			&::after {
+				transform: scaleY(1);
+        opacity: 1;
+			}
+		}
+	}
+
+	.el-submenu__title {
+		color: $navFontColor;
+		@include menu-item-hover-focus;
+		i {
+			color: $navFontColor;
+		}
+	}
+
+  .el-submenu {
+    .el-menu-item {
+      background-color: $navSubBgColor;
+      @include sub-menu-item-hover-focus;
+      &.is-active {
+        background-color: $navActiveBgColor;
+      }
+    }
+  }
+}

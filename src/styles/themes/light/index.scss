@@ -1,0 +1,56 @@
+// 内部主题变量覆盖
+@import "@/styles/element-themes/light-var.scss";
+
+#app {
+  // element-plus样式覆盖
+  // 表格相关
+  .el-table {
+
+    th {
+      background-color: $tableHeadBgColor;
+      color: $fontColor;
+    }
+
+  }
+
+  // 分页相关
+  .el-pagination {
+
+    &.is-background {
+
+      .btn-next,
+      .btn-prev {
+        background-color: #fff;
+        border: 1px solid $borderColor;
+
+        &:disabled,
+        &.disabled {
+          color: $borderColor;
+        }
+      }
+
+      .el-pager {
+        li {
+          background-color: #fff;
+          border: 1px solid $borderColor;
+
+          &.disabled {
+            color: $borderColor;
+          }
+
+          &:not(.disabled):hover {
+            color: $primary;
+            border-color: $primary;
+          }
+
+          &:not(.disabled).active {
+            color: #fff;
+            background-color: $primary;
+            border-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+}

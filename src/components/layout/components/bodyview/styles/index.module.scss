@@ -1,0 +1,25 @@
+.app-main-container {
+	@include box-all;
+}
+
+.app-nav {
+	width: $sidebarWidth !important;
+	background-color: $navBgColor;
+	overflow: hidden;
+	@include box-all;
+}
+
+.app-content {
+	color: $fontColor;
+	padding: 0;
+  border-top: 1px solid $appContentBorderColor;
+  border-left: 1px solid $appContentBorderColor;
+
+  &.app-navless-content {
+    border: none;
+  }
+
+	.el-scrollbar__view {
+		padding: $padding;
+	}
+}
